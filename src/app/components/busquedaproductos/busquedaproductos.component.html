@@ -1,0 +1,49 @@
+<app-loading *ngIf="loading">
+</app-loading>
+<div *ngIf="!loading" class="card-columns">
+    <div class="card" *ngFor="let producto of ProductosFiltrados" style="width: 18rem;">
+        <img [src]="producto.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.productName}}</h5>
+            <p class="card-text">{{producto.description}}</p>
+            <p class="card-text"><small class="text-muted"> $ {{producto.price}}</small> </p>
+            <a (click)="Informacion(producto.productId)" class="btn btn-outline-primary ">Mostrar mas...</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+private termino: string = "";
+  public heroesFiltrados: any = {};
+  // public loading: boolean = true;
+
+  this.ActivatedRoute.params.subscribe((terminoURL) => {
+
+    // this.loading=false;
+    this.termino = terminoURL.termino
+    // console.log(this.termino)
+    this.heroesFiltrados = this._heroeService.buscarheroe(this.termino);
+    //  console.log(this.heroesFiltrados)
+  }) -->

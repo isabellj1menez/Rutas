@@ -1,0 +1,19 @@
+<div class="jumbotron productos">
+    <div>
+        <img class="Imgproductos" [src]="productoinfo.imageUrl" alt="">
+    </div>
+
+    <div>
+        <h1> {{productoinfo.productName}}</h1>
+        <h2> $ {{productoinfo.price}} </h2>
+        <h5>productCode {{productoinfo.productCode}} </h5>
+        <h6>releaseDate: {{productoinfo.releaseDate}} </h6>
+        <div class="stars-outer">
+            <div class="stars-inner" [style.width]="obtenerwidth(productoinfo.starRating)"></div>
+        </div>
+
+        <p> {{productoinfo.description}} </p>
+
+
+    </div>
+</div>
